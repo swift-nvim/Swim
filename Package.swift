@@ -19,11 +19,11 @@ let package = Package(
             branch: "master"
         ),
         .package(
-            url: "https://github.com/leviouwendijk/SwimInterpreter.git",
+            url: "https://github.com/swift-nvim/SwimInterpreter.git",
             branch: "master"
         ),
         .package(
-            url: "https://github.com/leviouwendijk/SwimIO.git",
+            url: "https://github.com/swift-nvim/SwimIO.git",
             branch: "master"
         ),
     ],
