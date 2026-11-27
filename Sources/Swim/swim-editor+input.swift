@@ -1,6 +1,7 @@
 import Foundation
 import Position
 import SwimInterpreter
+import Surface
 
 extension SwimEditor {
     mutating func apply(
@@ -193,7 +194,7 @@ extension SwimEditor {
     }
 
     mutating func handleLiteral(
-        _ input: SwimInterpreter.Input,
+        _ input: SurfaceInput.Key,
         context: SwimEditorContext
     ) -> SwimEditorEvent? {
         if replaceSession != nil {
@@ -247,7 +248,7 @@ extension SwimEditor {
     }
 
     mutating func handleReplaceLiteral(
-        _ input: SwimInterpreter.Input
+        _ input: SurfaceInput.Key
     ) -> SwimEditorEvent? {
         guard var session = replaceSession else {
             return nil
@@ -348,7 +349,7 @@ extension SwimEditor {
     }
 
     mutating func handleBlockInsertLiteral(
-        _ input: SwimInterpreter.Input,
+        _ input: SurfaceInput.Key,
         context: SwimEditorContext
     ) -> SwimEditorEvent? {
         switch input {

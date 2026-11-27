@@ -1,5 +1,6 @@
 import Position
 import SwimInterpreter
+import Surface
 
 public struct SwimEditor:
     Sendable,
@@ -203,7 +204,7 @@ public struct SwimEditor:
     }
 
     public mutating func handle(
-        _ input: SwimInterpreter.Input,
+        _ input: SurfaceInput.Key,
         context: SwimEditorContext = .init()
     ) -> SwimEditorEvent? {
         let before = buffer

@@ -26,6 +26,10 @@ let package = Package(
             url: "https://github.com/swift-nvim/SwimIO.git",
             branch: "master"
         ),
+        .package(
+            url: "https://github.com/swift-lco/Surface.git",
+            branch: "master"
+        ),
     ],
     targets: [
         .target(
@@ -34,6 +38,10 @@ let package = Package(
                 "Position",
                 "SwimInterpreter",
                 "SwimIO",
+                .product(
+                    name: "Surface",
+                    package: "Surface"
+                ),
             ]
         ),
     ],
